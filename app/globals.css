@@ -6,29 +6,29 @@
   --font-body: 'DM Sans', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  /* Backgrounds (Light Theme) */
-  --c-void:     #FFFFFF;   /* pure white outermost bg */
-  --c-deep:     #FFFFFF;   /* content area bg */
-  --c-base:     #FFFFFF;   /* card surface */
-  --c-surface:  #F3F4F6;   /* inputs, pill bg */
-  --c-raised:   #E5E7EB;   /* hover states on pills */
-  --c-border:   #E5E7EB;   /* dividers & borders */
-  --c-border-lt:#D1D5DB;   /* emphasis borders */
+  /* Backgrounds (Dark Theme) */
+  --c-void:     #0B0B0F;   /* space black background */
+  --c-deep:     #0B0B0F;   /* content area bg */
+  --c-base:     #101016;   /* card surface */
+  --c-surface:  #16161F;   /* inputs, pill bg */
+  --c-raised:   #22222E;   /* hover states on pills */
+  --c-border:   #1A1A24;   /* dividers & borders */
+  --c-border-lt:#2C2C3A;   /* emphasis borders */
 
   /* Text */
-  --c-text-1:   #111827;   /* primary heading, bold text */
-  --c-text-2:   #4B5563;   /* description paragraph */
-  --c-text-3:   #9CA3AF;   /* tertiary placeholders */
-  --c-text-inv: #FFFFFF;   /* text inside dark CTA buttons */
+  --c-text-1:   #FFFFFF;   /* primary heading, bold text */
+  --c-text-2:   #94A3B8;   /* description slate paragraph */
+  --c-text-3:   #475569;   /* tertiary placeholders */
+  --c-text-inv: #0B0B0F;   /* text inside dark CTA buttons */
 
   /* Accent Trio */
-  --c-violet:   #111827;   /* PRIMARY accent — black/charcoal CTAs */
-  --c-violet-lt:#374151;   /* hover color for CTAs */
-  --c-violet-bg:#E5E7EB;   /* background highlight */
+  --c-violet:   #7C3AED;   /* PRIMARY accent — violet */
+  --c-violet-lt:#9061F9;   /* hover color for CTAs */
+  --c-violet-bg:#1E1B4B;   /* background highlight */
   --c-cyan:     #0EA5E9;   /* links/badges */
-  --c-cyan-bg:  #E0F2FE;
+  --c-cyan-bg:  #083344;
   --c-green:    #10B981;   /* SUCCESS available dot */
-  --c-green-bg: #E6F4EA;   /* soft green available pill bg */
+  --c-green-bg: #064E3B;   /* soft green available pill bg */
 }
 
 @theme {
@@ -79,8 +79,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::selection {
-  background: #EAECE9;
-  color: #1C2E1E;
+  background: rgba(124, 58, 237, 0.35);
+  color: #FFFFFF;
 }
 
 @keyframes blink {
