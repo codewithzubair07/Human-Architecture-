@@ -290,7 +290,7 @@ export default function HomePage() {
               aria-hidden="true"
               style={{ willChange: 'transform, contents', transform: 'translate3d(0, 0, 0)' }}
               className="w-full h-full object-cover object-center lg:object-right"
-              src="/nexus/robot.mp4"
+              src="/nexus/watermark_removed_7df78e83-9b68-4eb0-8b29-f9f7a12a09b9.mp4"
             />
           </div>
         </div>
@@ -325,7 +325,7 @@ export default function HomePage() {
               <m.div variants={FADE_UP} className="flex flex-wrap gap-4 items-center will-change-[transform,opacity]">
                 <a
                   href="#portfolio"
-                  className="font-body text-[13px] font-semibold tracking-[0.08em] text-white bg-text-1 border border-text-1 rounded-full px-7 py-3.5 hover:bg-transparent hover:text-text-1 active:scale-[0.97] transition-all duration-200 shadow-[0_4px_12px_rgba(17,24,39,0.1)]"
+                  className="font-body text-[13px] font-semibold tracking-[0.08em] text-text-1 bg-transparent border border-text-1 rounded-full px-7 py-3.5 hover:bg-text-1 hover:text-white active:scale-[0.97] transition-all duration-200 shadow-[0_4px_12px_rgba(17,24,39,0.05)]"
                 >
                   View Portfolio &rarr;
                 </a>
