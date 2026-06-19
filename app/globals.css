@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  /* Fonts */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Backgrounds (Light Theme) */
+  --c-void:     #FFFFFF;   /* pure white outermost bg */
+  --c-deep:     #FFFFFF;   /* content area bg */
+  --c-base:     #FFFFFF;   /* card surface */
+  --c-surface:  #F3F4F6;   /* inputs, pill bg */
+  --c-raised:   #E5E7EB;   /* hover states on pills */
+  --c-border:   #E5E7EB;   /* dividers & borders */
+  --c-border-lt:#D1D5DB;   /* emphasis borders */
+
+  /* Text */
+  --c-text-1:   #111827;   /* primary heading, bold text */
+  --c-text-2:   #4B5563;   /* description paragraph */
+  --c-text-3:   #9CA3AF;   /* tertiary placeholders */
+  --c-text-inv: #FFFFFF;   /* text inside dark CTA buttons */
+
+  /* Accent Trio */
+  --c-violet:   #111827;   /* PRIMARY accent — black/charcoal CTAs */
+  --c-violet-lt:#374151;   /* hover color for CTAs */
+  --c-violet-bg:#E5E7EB;   /* background highlight */
+  --c-cyan:     #0EA5E9;   /* links/badges */
+  --c-cyan-bg:  #E0F2FE;
+  --c-green:    #10B981;   /* SUCCESS available dot */
+  --c-green-bg: #E6F4EA;   /* soft green available pill bg */
+}
+
+@theme {
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+
+  --color-void: var(--c-void);
+  --color-deep: var(--c-deep);
+  --color-base: var(--c-base);
+  --color-surface: var(--c-surface);
+  --color-raised: var(--c-raised);
+  --color-border: var(--c-border);
+  --color-border-lt: var(--c-border-lt);
+
+  --color-text-1: var(--c-text-1);
+  --color-text-2: var(--c-text-2);
+  --color-text-3: var(--c-text-3);
+  --color-text-inv: var(--c-text-inv);
+
+  --color-violet: var(--c-violet);
+  --color-violet-lt: var(--c-violet-lt);
+  --color-violet-bg: var(--c-violet-bg);
+  --color-cyan: var(--c-cyan);
+  --color-cyan-bg: var(--c-cyan-bg);
+  --color-green: var(--c-green);
+  --color-green-bg: var(--c-green-bg);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--c-void);
+  color: var(--c-text-1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: #EAECE9;
+  color: #1C2E1E;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1.05s step-end infinite;
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  background: var(--c-violet);
+  border-radius: 1.5px;
+  vertical-align: text-bottom;
+  margin-left: 4px;
+  will-change: opacity;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(17, 24, 39, 0); }
+  50%       { box-shadow: 0 0 0 6px rgba(17, 24, 39, 0.08); }
+}
+
+@keyframes dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.4); opacity: 0.7; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+.animate-dot-pulse {
+  animation: dot-pulse 2.2s ease-in-out infinite;
+}
