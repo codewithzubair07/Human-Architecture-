@@ -143,9 +143,9 @@ export default function HomePage() {
           <div className="flex flex-row items-center gap-2 select-none cursor-pointer">
             <div className="relative w-7 h-7 sm:w-8 sm:h-8 overflow-hidden flex items-center justify-center">
               <img
-                src="/nexus/logo.png"
+                src="/nexus/logo-orange.png"
                 alt="HA Logo"
-                className="h-full w-auto max-w-none invert"
+                className="h-full w-auto max-w-none"
               />
             </div>
             <span className="font-display text-[18px] sm:text-[21px] font-bold tracking-[-0.03em] text-white whitespace-nowrap">
@@ -225,7 +225,7 @@ export default function HomePage() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#FF5A1F] hover:opacity-80 transition-opacity"
+              className="text-[#E1306C] hover:opacity-80 transition-opacity"
               aria-label="Instagram"
             >
               <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -240,7 +240,7 @@ export default function HomePage() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-body font-bold text-[14px] text-[#FF5A1F] hover:opacity-80 transition-opacity leading-none select-none"
+              className="font-body font-bold text-[14px] text-[#0A66C2] hover:opacity-80 transition-opacity leading-none select-none"
               aria-label="LinkedIn"
             >
               in
@@ -251,7 +251,7 @@ export default function HomePage() {
               href="https://behance.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display font-bold text-[15px] text-[#FF5A1F] hover:opacity-80 transition-opacity leading-none select-none"
+              className="font-display font-bold text-[15px] text-[#0057FF] hover:opacity-80 transition-opacity leading-none select-none"
               aria-label="Behance"
             >
               Bē
@@ -260,7 +260,7 @@ export default function HomePage() {
             {/* Mail */}
             <a
               href="mailto:contact@humanarchitecture.com"
-              className="text-[#FF5A1F] hover:opacity-80 transition-opacity"
+              className="text-[#EA4335] hover:opacity-80 transition-opacity"
               aria-label="Email"
             >
               <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -282,9 +282,9 @@ export default function HomePage() {
             <div className="flex flex-row gap-2 items-center select-none">
               <div className="relative w-7 h-7 sm:w-8 sm:h-8 overflow-hidden flex items-center justify-center">
                 <img
-                  src="/nexus/logo.png"
+                  src="/nexus/logo-orange.png"
                   alt="HA Logo"
-                  className="h-full w-auto max-w-none invert"
+                  className="h-full w-auto max-w-none"
                 />
               </div>
               <span className="font-display text-[18px] sm:text-[21px] font-bold tracking-[-0.03em] text-text-1 whitespace-nowrap">
