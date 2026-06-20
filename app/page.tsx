@@ -143,7 +143,7 @@ export default function HomePage() {
           <div className="flex flex-row items-center gap-2 select-none cursor-pointer">
             <div className="relative w-7 h-7 sm:w-8 sm:h-8 overflow-hidden flex items-center justify-center">
               <img
-                src="/logo.png"
+                src="/nexus/logo.png"
                 alt="HA Logo"
                 className="h-full w-auto max-w-none invert"
               />
@@ -204,19 +204,28 @@ export default function HomePage() {
           </button>
         </header>
 
-        {/* Sidebar: Left-side follow column */}
-        <aside className="hidden lg:flex fixed left-8 top-36 w-8 flex-col items-center gap-6 z-40 select-none">
-          <span className="font-mono text-[9px] font-bold tracking-[0.25em] text-text-2 uppercase whitespace-nowrap rotate-[-90deg] origin-center mb-10 select-none">
-            follow our journey
-          </span>
+        {/* Sidebar: Left-side social follow column */}
+        <aside className="hidden lg:flex fixed left-8 top-[120px] w-8 flex-col items-center z-40 select-none">
+          {/* Top purple dot */}
+          <div className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] mb-5 animate-pulse" />
           
-          <div className="flex flex-col items-center gap-5">
+          {/* Rotated text container with explicit height to reserve layout space */}
+          <div className="relative w-8 h-[160px] flex items-center justify-center mb-4">
+            <span className="absolute font-mono text-[9px] font-bold tracking-[0.25em] text-text-2 uppercase whitespace-nowrap rotate-[-90deg] origin-center select-none">
+              follow our journey
+            </span>
+          </div>
+          
+          {/* Vertical line between text and icons */}
+          <div className="w-[1px] h-8 bg-white/10 mb-4" />
+          
+          <div className="flex flex-col items-center gap-4">
             {/* Instagram */}
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-text-2 hover:text-text-1 transition-colors"
+              className="text-[#E1306C] hover:opacity-80 transition-opacity"
               aria-label="Instagram"
             >
               <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -231,7 +240,7 @@ export default function HomePage() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-body font-bold text-[14px] text-text-2 hover:text-text-1 transition-colors leading-none select-none"
+              className="font-body font-bold text-[14px] text-[#0A66C2] hover:opacity-80 transition-opacity leading-none select-none"
               aria-label="LinkedIn"
             >
               in
@@ -242,7 +251,7 @@ export default function HomePage() {
               href="https://behance.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display font-bold text-[15px] text-text-2 hover:text-text-1 transition-colors leading-none select-none"
+              className="font-display font-bold text-[15px] text-[#0057FF] hover:opacity-80 transition-opacity leading-none select-none"
               aria-label="Behance"
             >
               Bē
@@ -251,7 +260,7 @@ export default function HomePage() {
             {/* Mail */}
             <a
               href="mailto:contact@humanarchitecture.com"
-              className="text-text-2 hover:text-text-1 transition-colors"
+              className="text-[#EA4335] hover:opacity-80 transition-opacity"
               aria-label="Email"
             >
               <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -273,7 +282,7 @@ export default function HomePage() {
             <div className="flex flex-row gap-2 items-center select-none">
               <div className="relative w-7 h-7 sm:w-8 sm:h-8 overflow-hidden flex items-center justify-center">
                 <img
-                  src="/logo.png"
+                  src="/nexus/logo.png"
                   alt="HA Logo"
                   className="h-full w-auto max-w-none invert"
                 />
@@ -374,15 +383,15 @@ export default function HomePage() {
               
               {/* §9  HERO HEADLINE */}
               <m.div variants={FADE_UP} className="will-change-[transform,opacity] w-full">
-                <h1 className="font-display text-[32px] sm:text-[44px] lg:text-[52px] xl:text-[60px] font-extrabold tracking-[-0.04em] leading-[1.05] text-text-1 select-none whitespace-pre-wrap mb-0 lowercase">
-                  we help brands <span className="bg-gradient-to-r from-violet to-violet-lt bg-clip-text text-transparent font-extrabold">grow</span> through content, design <span className="text-violet font-semibold">&</span> technology
+                <h1 className="font-display text-[32px] sm:text-[44px] lg:text-[52px] xl:text-[60px] font-light tracking-[-0.03em] leading-[1.1] text-text-1 select-none whitespace-pre-wrap mb-0">
+                  We help brands <span className="text-[#7C3AED] font-light">grow</span> through content, design <span className="text-[#7C3AED] font-light">&</span> technology.
                 </h1>
               </m.div>
 
               {/* §10  SUBHEADLINE */}
-              <m.div variants={FADE_UP} className="mt-8 mb-12 will-change-[transform,opacity]">
-                <p className="font-mono text-[12px] sm:text-[14px] uppercase tracking-[0.12em] text-white/90 font-semibold">
-                  content strategy &bull; branding &bull; websites
+              <m.div variants={FADE_UP} className="mt-6 mb-10 will-change-[transform,opacity]">
+                <p className="font-body text-[15px] sm:text-[16px] text-text-2 leading-relaxed max-w-[420px] font-normal">
+                  We craft meaningful digital experiences that connect, engage, and drive real results.
                 </p>
               </m.div>
 
