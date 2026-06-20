@@ -211,7 +211,7 @@ export default function HomePage() {
           
           {/* Rotated text container with explicit height to reserve layout space */}
           <div className="relative w-8 h-[160px] flex items-center justify-center mb-4">
-            <span className="absolute font-mono text-[9px] font-bold tracking-[0.25em] text-text-2 uppercase whitespace-nowrap rotate-[-90deg] origin-center select-none">
+            <span className="absolute font-mono text-[9px] font-bold tracking-[0.25em] text-white/80 uppercase whitespace-nowrap rotate-[-90deg] origin-center select-none">
               follow our journey
             </span>
           </div>
@@ -384,13 +384,13 @@ export default function HomePage() {
               {/* §9  HERO HEADLINE */}
               <m.div variants={FADE_UP} className="will-change-[transform,opacity] w-full">
                 <h1 className="font-display text-[32px] sm:text-[44px] lg:text-[52px] xl:text-[60px] font-light tracking-[-0.03em] leading-[1.1] text-text-1 select-none whitespace-pre-wrap mb-0">
-                  We help brands <span className="text-[#7C3AED] font-light">grow</span> through content, design <span className="text-[#7C3AED] font-light">&</span> technology.
+                  We help brands <span className="text-[#9061F9] font-light">grow</span> through content, design <span className="text-[#9061F9] font-light">&</span> technology.
                 </h1>
               </m.div>
 
               {/* §10  SUBHEADLINE */}
               <m.div variants={FADE_UP} className="mt-6 mb-10 will-change-[transform,opacity]">
-                <p className="font-body text-[15px] sm:text-[16px] text-text-2 leading-relaxed max-w-[420px] font-normal">
+                <p className="font-body text-[15px] sm:text-[16px] text-white/90 leading-relaxed max-w-[420px] font-normal">
                   We craft meaningful digital experiences that connect, engage, and drive real results.
                 </p>
               </m.div>
@@ -441,10 +441,10 @@ export default function HomePage() {
               >
                 <div className="flex items-center gap-1.5 mb-2 select-none">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
-                  <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-text-2">assistant</span>
+                  <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-white/60">assistant</span>
                 </div>
                 <p className="font-body text-[13px] text-white leading-relaxed">
-                  hello! how can we help you build the <span className="text-[#7C3AED] font-semibold">future.</span>?
+                  hello! how can we help you build the <span className="text-[#9061F9] font-semibold">future.</span>?
                 </p>
                 <div className="mt-3 flex gap-2">
                   <a
