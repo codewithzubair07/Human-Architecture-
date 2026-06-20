@@ -24,9 +24,40 @@ const STAGGER = {
 };
 
 export default function HomePage() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [progress, setProgress] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
+
+  // loading animation simulation
+  useEffect(() => {
+    let currentProgress = 0;
+    const interval = setInterval(() => {
+      let increment = 1;
+      if (currentProgress < 30) {
+        increment = Math.floor(Math.random() * 3) + 2; // fast start
+      } else if (currentProgress < 75) {
+        increment = Math.floor(Math.random() * 2) + 1; // medium progress
+      } else if (currentProgress < 95) {
+        increment = Math.floor(Math.random() * 1.5) + 1; // slow down near end
+      } else {
+        increment = 1; // slow end
+      }
+
+      currentProgress = Math.min(100, currentProgress + increment);
+      setProgress(currentProgress);
+
+      if (currentProgress >= 100) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500); // 500ms delay to display 100%
+      }
+    }, 45); // roughly 3.5s loading time
+
+    return () => clearInterval(interval);
+  }, []);
 
   // §5  BACKGROUND VIDEO — ABSOLUTE MOUSE SCRUBBING
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -127,6 +158,131 @@ export default function HomePage() {
 
   return (
     <LazyMotion features={domAnimation}>
+      {/* Loading Screen Overlay */}
+      <AnimatePresence mode="wait">
+        {isLoading && (
+          <m.div
+            key="loading-screen"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
+            className="fixed inset-0 z-[100] flex flex-col items-center justify-center select-none bg-black overflow-hidden"
+          >
+            {/* Left Architectural Structure - absolute to viewport */}
+            <div className="absolute left-0 top-0 bottom-0 w-[30%] max-w-[450px] flex items-center justify-start pointer-events-none select-none z-[1] opacity-75 sm:opacity-100">
+              <img
+                src="/nexus/loading-left-arch.png"
+                alt="Architecture"
+                className="h-full w-auto object-contain object-left"
+              />
+            </div>
+
+            {/* Right Concentric Orbits - absolute to viewport */}
+            <div className="absolute right-0 top-0 bottom-0 w-[32%] max-w-[480px] flex items-center justify-end pointer-events-none select-none z-[1] opacity-70 sm:opacity-100">
+              <img
+                src="/nexus/loading-right-orbits.png"
+                alt="Technical orbits"
+                className="h-full w-auto object-contain object-right"
+              />
+            </div>
+
+            {/* Top Header: Design • Content • Technology */}
+            <div className="absolute top-10 inset-x-0 flex justify-center items-center gap-3 font-mono text-[9px] sm:text-[11px] uppercase tracking-[0.25em] text-white/80 z-20">
+              <span>DESIGN</span>
+              <span className="text-[#FF5A1F]">&bull;</span>
+              <span>CONTENT</span>
+              <span className="text-[#FF5A1F]">&bull;</span>
+              <span>TECHNOLOGY</span>
+            </div>
+
+            {/* Center Content Block */}
+            <div className="flex flex-col items-center justify-center text-center px-6 z-20 select-none">
+              {/* HA Brand Logo */}
+              <img
+                src="/nexus/logo-orange.png"
+                alt="HA Logo"
+                className="w-[85px] sm:w-[110px] h-auto object-contain"
+              />
+
+              {/* Brand Name Text */}
+              <div className="font-display font-medium text-[20px] sm:text-[24px] tracking-[-0.02em] text-white mt-4 sm:mt-5">
+                Human <span className="text-[#FF5A1F]">Architecture</span>
+              </div>
+
+              {/* Loading Experience Header */}
+              <div className="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-white/60 mt-8 sm:mt-10 mb-6 sm:mb-8">
+                LOADING EXPERIENCE
+              </div>
+
+              {/* Dotted Spinning Indicator and Central Orb */}
+              <div className="relative w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] flex items-center justify-center">
+                {/* Orb in the center */}
+                <img
+                  src="/nexus/loading-center-orb.png"
+                  alt="Orb"
+                  className="w-[65px] h-[65px] sm:w-[80px] sm:h-[80px] object-contain z-10"
+                />
+
+                {/* Spinning Dotted Circle SVG */}
+                <m.svg
+                  viewBox="0 0 100 100"
+                  className="absolute inset-0 w-full h-full z-0"
+                  animate={{ rotate: 360 }}
+                  transition={{
+                    duration: 7,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                >
+                  {/* Grey Dotted Circle */}
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="41"
+                    stroke="rgba(255, 255, 255, 0.16)"
+                    strokeWidth="1.2"
+                    strokeDasharray="2.5 5"
+                    fill="none"
+                  />
+
+                  {/* Primary Orange Glowing Dot */}
+                  <circle
+                    cx="50"
+                    cy="9"
+                    r="2.5"
+                    fill="#FF5A1F"
+                    className="shadow-[0_0_10px_#FF5A1F]"
+                  />
+
+                  {/* Secondary Smaller Orange Dot (at 30 degrees angle) */}
+                  <circle
+                    cx="70.5"
+                    cy="14.5"
+                    r="1.5"
+                    fill="#FF5A1F"
+                    opacity="0.6"
+                  />
+                </m.svg>
+              </div>
+
+              {/* Percentage Counter */}
+              <div className="font-mono font-bold text-[#FF5A1F] text-[15px] sm:text-[17px] tracking-[0.1em] mt-5 sm:mt-6">
+                {progress} %
+              </div>
+            </div>
+
+            {/* Bottom Tagline: We combine... */}
+            <div className="absolute bottom-10 inset-x-0 flex flex-col items-center justify-center gap-1 text-center px-6 z-20">
+              <p className="font-mono text-[8px] sm:text-[9px] uppercase tracking-[0.18em] text-white/40 leading-relaxed max-w-[550px]">
+                WE COMBINE HUMAN INSIGHT WITH TECHNOLOGY
+              </p>
+              <p className="font-mono text-[8px] sm:text-[9px] uppercase tracking-[0.18em] text-white/40 leading-relaxed max-w-[550px]">
+                TO CREATE <span className="text-[#FF5A1F] font-semibold">MEANINGFUL</span> DIGITAL EXPERIENCES.
+              </p>
+            </div>
+          </m.div>
+        )}
+      </AnimatePresence>
+
       {/* §4  PAGE SHELL */}
       <div className="relative bg-void text-text-1 font-body antialiased overflow-x-hidden flex flex-col lg:block lg:min-h-screen selection:bg-[#EAECE9] selection:text-[#1C2E1E]">
         <div className="grid-plane" />
