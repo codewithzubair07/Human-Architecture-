@@ -22,9 +22,9 @@
   --c-text-inv: #0B0B0F;   /* text inside dark CTA buttons */
 
   /* Accent Trio */
-  --c-violet:   #7C3AED;   /* PRIMARY accent — violet */
-  --c-violet-lt:#9061F9;   /* hover color for CTAs */
-  --c-violet-bg:#1E1B4B;   /* background highlight */
+  --c-violet:   #FF5A1F;   /* PRIMARY accent — orange */
+  --c-violet-lt:#FF733F;   /* hover color for CTAs */
+  --c-violet-bg:#2D140A;   /* background highlight */
   --c-cyan:     #0EA5E9;   /* links/badges */
   --c-cyan-bg:  #083344;
   --c-green:    #10B981;   /* SUCCESS available dot */

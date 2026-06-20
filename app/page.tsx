@@ -164,7 +164,7 @@ export default function HomePage() {
                   {link}
                 </a>
                 {idx < menuLinks.length - 1 && (
-                  <span className="text-white/40 mx-0.5 text-[15px] select-none">,</span>
+                  <span className="text-[#FF5A1F] mx-2 text-[15px] select-none">&middot;</span>
                 )}
               </span>
             ))}
@@ -207,7 +207,7 @@ export default function HomePage() {
         {/* Sidebar: Left-side social follow column */}
         <aside className="hidden lg:flex fixed left-8 top-[120px] w-8 flex-col items-center z-40 select-none">
           {/* Top purple dot */}
-          <div className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] mb-5 animate-pulse" />
+          <div className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F] mb-5 animate-pulse" />
           
           {/* Rotated text container with explicit height to reserve layout space */}
           <div className="relative w-8 h-[160px] flex items-center justify-center mb-4">
@@ -225,7 +225,7 @@ export default function HomePage() {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#E1306C] hover:opacity-80 transition-opacity"
+              className="text-[#FF5A1F] hover:opacity-80 transition-opacity"
               aria-label="Instagram"
             >
               <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -240,7 +240,7 @@ export default function HomePage() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-body font-bold text-[14px] text-[#0A66C2] hover:opacity-80 transition-opacity leading-none select-none"
+              className="font-body font-bold text-[14px] text-[#FF5A1F] hover:opacity-80 transition-opacity leading-none select-none"
               aria-label="LinkedIn"
             >
               in
@@ -251,7 +251,7 @@ export default function HomePage() {
               href="https://behance.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-display font-bold text-[15px] text-[#0057FF] hover:opacity-80 transition-opacity leading-none select-none"
+              className="font-display font-bold text-[15px] text-[#FF5A1F] hover:opacity-80 transition-opacity leading-none select-none"
               aria-label="Behance"
             >
               Bē
@@ -260,7 +260,7 @@ export default function HomePage() {
             {/* Mail */}
             <a
               href="mailto:contact@humanarchitecture.com"
-              className="text-[#EA4335] hover:opacity-80 transition-opacity"
+              className="text-[#FF5A1F] hover:opacity-80 transition-opacity"
               aria-label="Email"
             >
               <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -384,7 +384,7 @@ export default function HomePage() {
               {/* §9  HERO HEADLINE */}
               <m.div variants={FADE_UP} className="will-change-[transform,opacity] w-full">
                 <h1 className="font-display text-[32px] sm:text-[44px] lg:text-[52px] xl:text-[60px] font-light tracking-[-0.03em] leading-[1.1] text-text-1 select-none whitespace-pre-wrap mb-0">
-                  We help brands <span className="text-[#9061F9] font-light">grow</span> through content, design <span className="text-[#9061F9] font-light">&</span> technology.
+                  We help brands <span className="text-[#FF5A1F] font-light">grow</span> through content, design <span className="text-[#FF5A1F] font-light">&</span> technology.
                 </h1>
               </m.div>
 
@@ -399,7 +399,7 @@ export default function HomePage() {
               <m.div variants={FADE_UP} className="flex flex-wrap gap-4 items-center will-change-[transform,opacity]">
                 <a
                   href="#portfolio"
-                  className="font-body text-[13px] font-semibold tracking-[0.08em] text-white bg-transparent border border-white/20 rounded-full px-7 py-3.5 hover:bg-white hover:text-[#0B0B0F] hover:border-white active:scale-[0.97] transition-all duration-200 shadow-[0_4px_12px_rgba(255,255,255,0.05)]"
+                  className="font-body text-[13px] font-semibold tracking-[0.08em] text-white bg-transparent border border-[#FF5A1F] rounded-full px-7 py-3.5 hover:bg-[#FF5A1F] hover:text-white hover:border-[#FF5A1F] active:scale-[0.97] transition-all duration-200 shadow-[0_4px_12px_rgba(255,90,31,0.15)]"
                 >
                   View Portfolio &rarr;
                 </a>
@@ -420,7 +420,7 @@ export default function HomePage() {
           {/* Chatbot Button */}
           <button
             onClick={() => setIsChatOpen(!isChatOpen)}
-            className="w-11 h-11 rounded-full bg-[#7C3AED] hover:bg-[#9061F9] flex items-center justify-center text-white transition-all duration-200 active:scale-95 shadow-lg shadow-[#7C3AED]/20 relative cursor-pointer"
+            className="w-11 h-11 rounded-full bg-[#FF5A1F] hover:bg-[#FF733F] flex items-center justify-center text-white transition-all duration-200 active:scale-95 shadow-lg shadow-[#FF5A1F]/20 relative cursor-pointer"
             aria-label="Toggle Chatbot"
           >
             <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -444,13 +444,13 @@ export default function HomePage() {
                   <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-white/60">assistant</span>
                 </div>
                 <p className="font-body text-[13px] text-white leading-relaxed">
-                  hello! how can we help you build the <span className="text-[#9061F9] font-semibold">future.</span>?
+                  hello! how can we help you build the <span className="text-[#FF5A1F] font-semibold">future.</span>?
                 </p>
                 <div className="mt-3 flex gap-2">
                   <a
                     href="#book-a-call"
                     onClick={() => setIsChatOpen(false)}
-                    className="text-[10px] font-mono uppercase tracking-[0.06em] bg-[#7C3AED] hover:bg-[#9061F9] text-white px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
+                    className="text-[10px] font-mono uppercase tracking-[0.06em] bg-[#FF5A1F] hover:bg-[#FF733F] text-white px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
                   >
                     chat now
                   </a>
